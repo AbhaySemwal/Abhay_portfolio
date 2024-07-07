@@ -44,13 +44,6 @@ const Services = () => {
       </motion.div>
       <motion.div className='listContainer' variants={variants}>
         <motion.div className='box' whileHover={{backgroundColor:"lightgray",color:"black"}}>
-          <h2>Web Development</h2>
-          <p>
-          Transforming your vision into a functional, responsive, and aesthetically pleasing website is my passion. I ensure your online presence is robust, secure, and scalable, catering to your business goals and enhancing user engagement.
-          </p>
-          <button>Go</button>
-        </motion.div>
-        <motion.div className='box' whileHover={{backgroundColor:"lightgray",color:"black"}}>
           <h2>Front-End Development</h2>
           <p>
           I specialize in creating intuitive and engaging user interfaces. By leveraging modern frameworks like React and Next, I ensure that your users enjoy a seamless and interactive experience across all devices.
