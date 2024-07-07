@@ -36,6 +36,7 @@
     }
     .formContainer{
         flex: 1;
+        // overflow: hidden;
         position: relative;
         @include mobile{
             width: 100%;
@@ -46,6 +47,9 @@
             margin: auto;
             stroke: orange;
             z-index: -1;
+            @include mobile{
+                display: none;
+            }
         }
         form{
             display: flex;
