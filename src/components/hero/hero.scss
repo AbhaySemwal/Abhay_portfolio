@@ -76,13 +76,11 @@
         img{
             height: 85%;
             width: 85%;
-            // height: 30rem;
-            // width:  45rem;
-            // object-fit: cover;
+            object-fit: contain;
             @include mobile{
                 height: 90%;
                 width: 90%;
-                object-fit: cover;
+                object-fit: contain;
             }
             
         }

@@ -17,7 +17,6 @@ const Navbar = () => {
         <div className="social">
           <a target="blank" href="https://www.linkedin.com/in/abhay-semwal-5092a0226/"><img src="/linkedin.png"></img></a>
           <a target="blank" href="https://github.com/AbhaySemwal"><img src="/github.png"></img></a>
-          {/* <a target="blank" href="https://www.instagram.com/abhay_semwal_01/"><img src="/instagram.png"></img></a> */}
         </div>
       </div>
     </div>

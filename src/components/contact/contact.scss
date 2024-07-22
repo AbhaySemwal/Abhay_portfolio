@@ -10,9 +10,9 @@
         width: 100%;
         padding: 10px;
         flex-direction: column;
-        min-height: 100vh; // Ensure it takes at least full viewport height
-        justify-content: flex-start; // Change from 100% to auto
-        overflow-y: auto; // Allow vertical scrolling
+        min-height: 100vh;
+        justify-content: flex-start;
+        overflow-y: auto;
     }
     
     .textContainer{
@@ -24,7 +24,7 @@
             gap: 20px;
             align-items: center;
             text-align: center;
-            margin: 20px 0; // Reduce top and bottom margin
+            margin: 20px 0;
         }
          h1{
             font-size: 100px;
@@ -37,22 +37,41 @@
             font-weight: 300;
          }
     }
-    .formContainer{
+    .formContainer {
         flex: 1;
-        // overflow: hidden;
         position: relative;
+        width: 100%;
+        overflow: hidden;
+    
         @include mobile {
             width: 100%;
-            padding: 20px; // Reduce padding
-            position: static; // Change from relative to static
+            padding: 20px;
         }
-        .phone{
+        .phone {
             position: absolute;
-            margin: auto;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            max-width: 100%;
+            height: auto;
             stroke: orange;
             z-index: -1;
-            @include mobile{
-                display: none;
+            
+            @include mobile {
+                max-width: 80%;
+                top: 0;
+                transform: translateX(-50%);
+            }
+    
+            svg {
+                width: 100%;
+                height: auto;
+                max-width: 450px;
+                
+                @include mobile {
+                    max-width: 100%;
+                }
             }
         }
         form{
@@ -60,7 +79,7 @@
             flex-direction: column;
             gap: 20px;
             @include mobile {
-                width: 100%; // Ensure full width on mobile
+                width: 100%;
             }
     
             input,textarea{
