@@ -1,29 +1,39 @@
-import React, { useRef } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import './services.scss'
-import {motion,useInView } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
 
-const variants={
-  initial:{
-    x:-500,
-    y:100,
-    opacity:0,
+const variants = {
+  initial: {
+    opacity: 0,
   },
-  animate:{
-    x:0,
-    opacity:1,
-    y:0,
-    transition:{
-      duration:1,
-      staggerChildren:0.1,
+  animate: {
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.1,
     }
   }
 }
 
 const Services = () => {
-  const ref=useRef();
-  const isinView= useInView(ref,{margin:"-100px"})
+  const ref = useRef();
+  const isInView = useInView(ref, { margin: "-100px" });
+  const [isAnimated, setIsAnimated] = useState(false);
+
+  useEffect(() => {
+    if (isInView) {
+      setIsAnimated(true);
+    }
+  }, [isInView]);
+
   return (
-    <motion.div className='services' ref={ref} variants={variants} initial="initial" whileInView="animate">
+    <motion.div 
+      className='services' 
+      ref={ref} 
+      variants={variants} 
+      initial="initial" 
+      animate={isAnimated ? "animate" : "initial"}
+    >
       <motion.div className='textContainer'>
         <p>I focus on helping your brand grow and <br/> move forward</p>
         <hr/>
