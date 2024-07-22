@@ -46,8 +46,14 @@ const Hero = () => {
           <motion.h2 variants={textVariants}>ABHAY SEMWAL</motion.h2>
           <motion.h1 variants={textVariants}>Full Stack Web Developer</motion.h1>
           <motion.div variants={textVariants} className='buttons'>
-            <motion.button variants={textVariants}>See the Latest Works</motion.button>
-            <motion.button variants={textVariants}>Contact me</motion.button>
+            <motion.a href="https://drive.google.com/file/d/11yWjt6Xmf5QoUtJoUxVCkkDbi9rPdZ7l/view?usp=drive_link" 
+              target="_blank" 
+              rel="noopener noreferrer" variants={textVariants}>
+                <motion.button variants={textVariants}>
+                  View Resume
+                </motion.button>
+              </motion.a>
+            <motion.a href='#Contact' variants={textVariants}><motion.button variants={textVariants}>Contact me</motion.button></motion.a>
           </motion.div>
             <motion.img variants={textVariants} animate="scrollButton" src='/scroll.png' alt=''></motion.img>
         </motion.div>

@@ -6,11 +6,13 @@
     overflow: hidden;
 
     .wrapper{
+        position: relative;
         max-width: 1366px;
         height: 100%;
         margin: auto;
 
         .textContainer{
+            position: relative;
             width: 50%;
             height: 100%;
             display: flex;
@@ -39,6 +41,8 @@
             }
             .buttons{
                 button{
+                    position: relative;
+                    z-index: 5;
                     padding: 20px;
                     border: 1px solid white;
                     border-radius: 10px;
