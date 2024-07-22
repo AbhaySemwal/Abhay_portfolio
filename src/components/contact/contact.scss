@@ -6,23 +6,26 @@
     display: flex;
     align-items: center;
     gap: 50px;
-    @include mobile{
+    @include mobile {
         width: 100%;
         padding: 10px;
-        flex-direction: column
-     }
+        flex-direction: column;
+        min-height: 100vh; // Ensure it takes at least full viewport height
+        justify-content: flex-start; // Change from 100% to auto
+        overflow-y: auto; // Allow vertical scrolling
+    }
     
     .textContainer{
         flex: 1;
         display: flex;
         flex-direction: column;
         gap: 40px;
-        @include mobile{
+        @include mobile {
             gap: 20px;
             align-items: center;
             text-align: center;
-            margin: 70px;
-         }
+            margin: 20px 0; // Reduce top and bottom margin
+        }
          h1{
             font-size: 100px;
             line-height: 88px;
@@ -38,10 +41,11 @@
         flex: 1;
         // overflow: hidden;
         position: relative;
-        @include mobile{
+        @include mobile {
             width: 100%;
-            padding: 50px;
-         }
+            padding: 20px; // Reduce padding
+            position: static; // Change from relative to static
+        }
         .phone{
             position: absolute;
             margin: auto;
@@ -55,6 +59,9 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
+            @include mobile {
+                width: 100%; // Ensure full width on mobile
+            }
     
             input,textarea{
                 padding: 20px;

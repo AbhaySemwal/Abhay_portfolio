@@ -64,16 +64,27 @@
         position: absolute;
         top: 0;
         right: 0;
+        display: flex;
+        justify-content: flex-end;
         @include mobile{
             top: unset;
             bottom: 0;
             height: 50%;
             width: 100%;
+            justify-content: center;
         }
         img{
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
+            height: 85%;
+            width: 85%;
+            // height: 30rem;
+            // width:  45rem;
+            // object-fit: cover;
+            @include mobile{
+                height: 90%;
+                width: 90%;
+                object-fit: cover;
+            }
+            
         }
     }
     .slidingTextContainer{

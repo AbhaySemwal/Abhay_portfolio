@@ -56,7 +56,11 @@ const Contact = () => {
           <span>+91 6396430288</span>
         </motion.div>
       </motion.div>
-      <motion.div className='formContainer'>
+      <motion.div  className='formContainer'
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    transition={{ delay: 1, duration: 1 }} // Reduced delay
+    viewport={{ once: true }}>
         <motion.div className='phone' initial={{opacity:1}} whileInView={{opacity:0}} transition={{delay:3 ,duration:1}}>
         <svg width="450px" height="450px" viewBox="0 0 32.666 32.666">
             <motion.path
